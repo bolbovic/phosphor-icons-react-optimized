@@ -1,30 +1,31 @@
-var R = Object.defineProperty;
-var l = Object.getOwnPropertySymbols;
-var p = Object.prototype.hasOwnProperty, c = Object.prototype.propertyIsEnumerable;
-var o = (a, r, e) => r in a ? R(a, r, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[r] = e, f = (a, r) => {
-  for (var e in r || (r = {}))
-    p.call(r, e) && o(a, e, r[e]);
-  if (l)
-    for (var e of l(r))
-      c.call(r, e) && o(a, e, r[e]);
+var i = Object.defineProperty;
+var r = Object.getOwnPropertySymbols;
+var p = Object.prototype.hasOwnProperty, f = Object.prototype.propertyIsEnumerable;
+var o = (a, t, e) => t in a ? i(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, s = (a, t) => {
+  for (var e in t || (t = {}))
+    p.call(t, e) && o(a, e, t[e]);
+  if (r)
+    for (var e of r(t))
+      f.call(t, e) && o(a, e, t[e]);
   return a;
 };
-var i = (a, r) => {
+var c = (a, t) => {
   var e = {};
-  for (var t in a)
-    p.call(a, t) && r.indexOf(t) < 0 && (e[t] = a[t]);
-  if (a != null && l)
-    for (var t of l(a))
-      r.indexOf(t) < 0 && c.call(a, t) && (e[t] = a[t]);
+  for (var l in a)
+    p.call(a, l) && t.indexOf(l) < 0 && (e[l] = a[l]);
+  if (a != null && r)
+    for (var l of r(a))
+      t.indexOf(l) < 0 && f.call(a, l) && (e[l] = a[l]);
   return e;
 };
-import s, { forwardRef as d } from "react";
+import d, { forwardRef as R } from "react";
 import n from "../../lib/OptiBase.mjs";
-const g = d((t, e) => {
-  var m = t, { children: a } = m, r = i(m, ["children"]);
-  return /* @__PURE__ */ s.createElement(n, f({ ref: e }, r), a, /* @__PURE__ */ s.createElement("path", { d: "M93.31,70,28,128l65.27,58a8,8,0,1,1-10.62,12l-72-64a8,8,0,0,1,0-12l72-64A8,8,0,1,1,93.31,70Zm152,52-72-64a8,8,0,0,0-10.62,12L228,128l-65.27,58a8,8,0,1,0,10.62,12l72-64a8,8,0,0,0,0-12Z" }));
+const u = R((l, e) => {
+  var m = l, { children: a } = m, t = c(m, ["children"]);
+  return /* @__PURE__ */ d.createElement(n, s({ ref: e }, t), a, /* @__PURE__ */ d.createElement("path", { d: "M93.31,70,28,128l65.27,58a8,8,0,1,1-10.62,12l-72-64a8,8,0,0,1,0-12l72-64A8,8,0,1,1,93.31,70Zm152,52-72-64a8,8,0,0,0-10.62,12L228,128l-65.27,58a8,8,0,1,0,10.62,12l72-64a8,8,0,0,0,0-12Z" }));
 });
-g.displayName = "Regular";
+u.displayName = "Regular";
 export {
-  g as Regular
+  u as Regular,
+  u as default
 };

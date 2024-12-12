@@ -1,30 +1,31 @@
-var R = Object.defineProperty;
+var i = Object.defineProperty;
 var m = Object.getOwnPropertySymbols;
-var p = Object.prototype.hasOwnProperty, c = Object.prototype.propertyIsEnumerable;
-var l = (e, r, a) => r in e ? R(e, r, { enumerable: !0, configurable: !0, writable: !0, value: a }) : e[r] = a, f = (e, r) => {
-  for (var a in r || (r = {}))
-    p.call(r, a) && l(e, a, r[a]);
+var p = Object.prototype.hasOwnProperty, f = Object.prototype.propertyIsEnumerable;
+var o = (e, t, a) => t in e ? i(e, t, { enumerable: !0, configurable: !0, writable: !0, value: a }) : e[t] = a, s = (e, t) => {
+  for (var a in t || (t = {}))
+    p.call(t, a) && o(e, a, t[a]);
   if (m)
-    for (var a of m(r))
-      c.call(r, a) && l(e, a, r[a]);
+    for (var a of m(t))
+      f.call(t, a) && o(e, a, t[a]);
   return e;
 };
-var i = (e, r) => {
+var c = (e, t) => {
   var a = {};
-  for (var t in e)
-    p.call(e, t) && r.indexOf(t) < 0 && (a[t] = e[t]);
+  for (var r in e)
+    p.call(e, r) && t.indexOf(r) < 0 && (a[r] = e[r]);
   if (e != null && m)
-    for (var t of m(e))
-      r.indexOf(t) < 0 && c.call(e, t) && (a[t] = e[t]);
+    for (var r of m(e))
+      t.indexOf(r) < 0 && f.call(e, r) && (a[r] = e[r]);
   return a;
 };
-import s, { forwardRef as d } from "react";
+import d, { forwardRef as R } from "react";
 import n from "../../lib/OptiBase.mjs";
-const A = d((t, a) => {
-  var o = t, { children: e } = o, r = i(o, ["children"]);
-  return /* @__PURE__ */ s.createElement(n, f({ ref: a }, r), e, /* @__PURE__ */ s.createElement("path", { d: "M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Zm0,177.57-51.77-32.35a8,8,0,0,0-8.48,0L72,209.57V48H184Z" }));
+const u = R((r, a) => {
+  var l = r, { children: e } = l, t = c(l, ["children"]);
+  return /* @__PURE__ */ d.createElement(n, s({ ref: a }, t), e, /* @__PURE__ */ d.createElement("path", { d: "M184,32H72A16,16,0,0,0,56,48V224a8,8,0,0,0,12.24,6.78L128,193.43l59.77,37.35A8,8,0,0,0,200,224V48A16,16,0,0,0,184,32Zm0,177.57-51.77-32.35a8,8,0,0,0-8.48,0L72,209.57V48H184Z" }));
 });
-A.displayName = "Regular";
+u.displayName = "Regular";
 export {
-  A as Regular
+  u as Regular,
+  u as default
 };

@@ -1,30 +1,31 @@
-var i = Object.defineProperty;
+var c = Object.defineProperty;
 var H = Object.getOwnPropertySymbols;
-var l = Object.prototype.hasOwnProperty, p = Object.prototype.propertyIsEnumerable;
-var o = (a, r, e) => r in a ? i(a, r, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[r] = e, h = (a, r) => {
-  for (var e in r || (r = {}))
-    l.call(r, e) && o(a, e, r[e]);
+var o = Object.prototype.hasOwnProperty, p = Object.prototype.propertyIsEnumerable;
+var m = (a, t, e) => t in a ? c(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, f = (a, t) => {
+  for (var e in t || (t = {}))
+    o.call(t, e) && m(a, e, t[e]);
   if (H)
-    for (var e of H(r))
-      p.call(r, e) && o(a, e, r[e]);
+    for (var e of H(t))
+      p.call(t, e) && m(a, e, t[e]);
   return a;
 };
-var c = (a, r) => {
+var h = (a, t) => {
   var e = {};
-  for (var t in a)
-    l.call(a, t) && r.indexOf(t) < 0 && (e[t] = a[t]);
+  for (var r in a)
+    o.call(a, r) && t.indexOf(r) < 0 && (e[r] = a[r]);
   if (a != null && H)
-    for (var t of H(a))
-      r.indexOf(t) < 0 && p.call(a, t) && (e[t] = a[t]);
+    for (var r of H(a))
+      t.indexOf(r) < 0 && p.call(a, r) && (e[r] = a[r]);
   return e;
 };
-import f, { forwardRef as s } from "react";
-import R from "../../lib/OptiBase.mjs";
-const V = s((t, e) => {
-  var m = t, { children: a } = m, r = c(m, ["children"]);
-  return /* @__PURE__ */ f.createElement(R, h({ ref: e }, r), a, /* @__PURE__ */ f.createElement("path", { d: "M240,104H229.2L201.42,41.5A16,16,0,0,0,186.8,32H69.2a16,16,0,0,0-14.62,9.5L26.8,104H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V184h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V120h8a8,8,0,0,0,0-16ZM69.2,48H186.8l24.89,56H44.31ZM216,200H192V176a8,8,0,0,0-8-8H72a8,8,0,0,0-8,8v24H40V120H216Z" }));
+import s, { forwardRef as d } from "react";
+import i from "../../lib/OptiBase.mjs";
+const R = d((r, e) => {
+  var l = r, { children: a } = l, t = h(l, ["children"]);
+  return /* @__PURE__ */ s.createElement(i, f({ ref: e }, t), a, /* @__PURE__ */ s.createElement("path", { d: "M240,104H229.2L201.42,41.5A16,16,0,0,0,186.8,32H69.2a16,16,0,0,0-14.62,9.5L26.8,104H16a8,8,0,0,0,0,16h8v80a16,16,0,0,0,16,16H64a16,16,0,0,0,16-16V184h96v16a16,16,0,0,0,16,16h24a16,16,0,0,0,16-16V120h8a8,8,0,0,0,0-16ZM69.2,48H186.8l24.89,56H44.31ZM216,200H192V176a8,8,0,0,0-8-8H72a8,8,0,0,0-8,8v24H40V120H216Z" }));
 });
-V.displayName = "Regular";
+R.displayName = "Regular";
 export {
-  V as Regular
+  R as Regular,
+  R as default
 };

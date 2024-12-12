@@ -1,30 +1,31 @@
-var i = Object.defineProperty;
-var H = Object.getOwnPropertySymbols;
+var d = Object.defineProperty;
+var l = Object.getOwnPropertySymbols;
 var o = Object.prototype.hasOwnProperty, p = Object.prototype.propertyIsEnumerable;
-var m = (a, r, e) => r in a ? i(a, r, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[r] = e, c = (a, r) => {
-  for (var e in r || (r = {}))
-    o.call(r, e) && m(a, e, r[e]);
-  if (H)
-    for (var e of H(r))
-      p.call(r, e) && m(a, e, r[e]);
+var m = (a, t, e) => t in a ? d(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, f = (a, t) => {
+  for (var e in t || (t = {}))
+    o.call(t, e) && m(a, e, t[e]);
+  if (l)
+    for (var e of l(t))
+      p.call(t, e) && m(a, e, t[e]);
   return a;
 };
-var f = (a, r) => {
+var s = (a, t) => {
   var e = {};
-  for (var t in a)
-    o.call(a, t) && r.indexOf(t) < 0 && (e[t] = a[t]);
-  if (a != null && H)
-    for (var t of H(a))
-      r.indexOf(t) < 0 && p.call(a, t) && (e[t] = a[t]);
+  for (var r in a)
+    o.call(a, r) && t.indexOf(r) < 0 && (e[r] = a[r]);
+  if (a != null && l)
+    for (var r of l(a))
+      t.indexOf(r) < 0 && p.call(a, r) && (e[r] = a[r]);
   return e;
 };
-import h, { forwardRef as s } from "react";
-import R from "../../lib/OptiBase.mjs";
-const V = s((t, e) => {
-  var l = t, { children: a } = l, r = f(l, ["children"]);
-  return /* @__PURE__ */ h.createElement(R, c({ ref: e }, r), a, /* @__PURE__ */ h.createElement("path", { d: "M216,40H168a8,8,0,0,0,0,16h16V176.85L111,44.14A8,8,0,0,0,104,40H40a8,8,0,0,0,0,16H56V200H40a8,8,0,0,0,0,16H88a8,8,0,0,0,0-16H72V79.15l73,132.71a8,8,0,0,0,7,4.14h40a8,8,0,0,0,8-8V56h16a8,8,0,0,0,0-16ZM77.53,56H99.27l79.2,144H156.73Z" }));
+import c, { forwardRef as h } from "react";
+import i from "../../lib/OptiBase.mjs";
+const R = h((r, e) => {
+  var H = r, { children: a } = H, t = s(H, ["children"]);
+  return /* @__PURE__ */ c.createElement(i, f({ ref: e }, t), a, /* @__PURE__ */ c.createElement("path", { d: "M216,40H168a8,8,0,0,0,0,16h16V176.85L111,44.14A8,8,0,0,0,104,40H40a8,8,0,0,0,0,16H56V200H40a8,8,0,0,0,0,16H88a8,8,0,0,0,0-16H72V79.15l73,132.71a8,8,0,0,0,7,4.14h40a8,8,0,0,0,8-8V56h16a8,8,0,0,0,0-16ZM77.53,56H99.27l79.2,144H156.73Z" }));
 });
-V.displayName = "Regular";
+R.displayName = "Regular";
 export {
-  V as Regular
+  R as Regular,
+  R as default
 };

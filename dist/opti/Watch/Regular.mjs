@@ -1,30 +1,31 @@
-var h = Object.defineProperty;
-var l = Object.getOwnPropertySymbols;
+var c = Object.defineProperty;
+var r = Object.getOwnPropertySymbols;
 var p = Object.prototype.hasOwnProperty, A = Object.prototype.propertyIsEnumerable;
-var o = (a, r, e) => r in a ? h(a, r, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[r] = e, Z = (a, r) => {
-  for (var e in r || (r = {}))
-    p.call(r, e) && o(a, e, r[e]);
-  if (l)
-    for (var e of l(r))
-      A.call(r, e) && o(a, e, r[e]);
+var o = (a, t, e) => t in a ? c(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, f = (a, t) => {
+  for (var e in t || (t = {}))
+    p.call(t, e) && o(a, e, t[e]);
+  if (r)
+    for (var e of r(t))
+      A.call(t, e) && o(a, e, t[e]);
   return a;
 };
-var c = (a, r) => {
+var s = (a, t) => {
   var e = {};
-  for (var t in a)
-    p.call(a, t) && r.indexOf(t) < 0 && (e[t] = a[t]);
-  if (a != null && l)
-    for (var t of l(a))
-      r.indexOf(t) < 0 && A.call(a, t) && (e[t] = a[t]);
+  for (var l in a)
+    p.call(a, l) && t.indexOf(l) < 0 && (e[l] = a[l]);
+  if (a != null && r)
+    for (var l of r(a))
+      t.indexOf(l) < 0 && A.call(a, l) && (e[l] = a[l]);
   return e;
 };
-import f, { forwardRef as i } from "react";
-import s from "../../lib/OptiBase.mjs";
-const M = i((t, e) => {
-  var m = t, { children: a } = m, r = c(m, ["children"]);
-  return /* @__PURE__ */ f.createElement(s, Z({ ref: e }, r), a, /* @__PURE__ */ f.createElement("path", { d: "M208,128a79.94,79.94,0,0,0-32.7-64.47l-6.24-34.38A16,16,0,0,0,153.32,16H102.68A16,16,0,0,0,86.94,29.15L80.7,63.53a79.9,79.9,0,0,0,0,128.94l6.24,34.38A16,16,0,0,0,102.68,240h50.64a16,16,0,0,0,15.74-13.15l6.24-34.38A79.94,79.94,0,0,0,208,128ZM102.68,32h50.64l3.91,21.55a79.75,79.75,0,0,0-58.46,0ZM64,128a64,64,0,1,1,64,64A64.07,64.07,0,0,1,64,128Zm89.32,96H102.68l-3.91-21.55a79.75,79.75,0,0,0,58.46,0ZM120,128V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16H128A8,8,0,0,1,120,128Z" }));
+import Z, { forwardRef as d } from "react";
+import h from "../../lib/OptiBase.mjs";
+const i = d((l, e) => {
+  var m = l, { children: a } = m, t = s(m, ["children"]);
+  return /* @__PURE__ */ Z.createElement(h, f({ ref: e }, t), a, /* @__PURE__ */ Z.createElement("path", { d: "M208,128a79.94,79.94,0,0,0-32.7-64.47l-6.24-34.38A16,16,0,0,0,153.32,16H102.68A16,16,0,0,0,86.94,29.15L80.7,63.53a79.9,79.9,0,0,0,0,128.94l6.24,34.38A16,16,0,0,0,102.68,240h50.64a16,16,0,0,0,15.74-13.15l6.24-34.38A79.94,79.94,0,0,0,208,128ZM102.68,32h50.64l3.91,21.55a79.75,79.75,0,0,0-58.46,0ZM64,128a64,64,0,1,1,64,64A64.07,64.07,0,0,1,64,128Zm89.32,96H102.68l-3.91-21.55a79.75,79.75,0,0,0,58.46,0ZM120,128V88a8,8,0,0,1,16,0v32h32a8,8,0,0,1,0,16H128A8,8,0,0,1,120,128Z" }));
 });
-M.displayName = "Regular";
+i.displayName = "Regular";
 export {
-  M as Regular
+  i as Regular,
+  i as default
 };

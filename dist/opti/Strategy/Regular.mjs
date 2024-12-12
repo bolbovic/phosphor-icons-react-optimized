@@ -1,30 +1,31 @@
-var f = Object.defineProperty;
-var l = Object.getOwnPropertySymbols;
+var A = Object.defineProperty;
+var r = Object.getOwnPropertySymbols;
 var o = Object.prototype.hasOwnProperty, c = Object.prototype.propertyIsEnumerable;
-var L = (a, r, e) => r in a ? f(a, r, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[r] = e, p = (a, r) => {
-  for (var e in r || (r = {}))
-    o.call(r, e) && L(a, e, r[e]);
-  if (l)
-    for (var e of l(r))
-      c.call(r, e) && L(a, e, r[e]);
+var L = (a, t, e) => t in a ? A(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, p = (a, t) => {
+  for (var e in t || (t = {}))
+    o.call(t, e) && L(a, e, t[e]);
+  if (r)
+    for (var e of r(t))
+      c.call(t, e) && L(a, e, t[e]);
   return a;
 };
-var A = (a, r) => {
+var f = (a, t) => {
   var e = {};
-  for (var t in a)
-    o.call(a, t) && r.indexOf(t) < 0 && (e[t] = a[t]);
-  if (a != null && l)
-    for (var t of l(a))
-      r.indexOf(t) < 0 && c.call(a, t) && (e[t] = a[t]);
+  for (var l in a)
+    o.call(a, l) && t.indexOf(l) < 0 && (e[l] = a[l]);
+  if (a != null && r)
+    for (var l of r(a))
+      t.indexOf(l) < 0 && c.call(a, l) && (e[l] = a[l]);
   return e;
 };
-import Z, { forwardRef as i } from "react";
-import s from "../../lib/OptiBase.mjs";
-const R = i((t, e) => {
-  var m = t, { children: a } = m, r = A(m, ["children"]);
-  return /* @__PURE__ */ Z.createElement(s, p({ ref: e }, r), a, /* @__PURE__ */ Z.createElement("path", { d: "M76,152a36,36,0,1,0,36,36A36,36,0,0,0,76,152Zm0,56a20,20,0,1,1,20-20A20,20,0,0,1,76,208ZM42.34,106.34,56.69,92,42.34,77.66A8,8,0,0,1,53.66,66.34L68,80.69,82.34,66.34A8,8,0,0,1,93.66,77.66L79.31,92l14.35,14.34a8,8,0,0,1-11.32,11.32L68,103.31,53.66,117.66a8,8,0,0,1-11.32-11.32Zm187.32,96a8,8,0,0,1-11.32,11.32L204,199.31l-14.34,14.35a8,8,0,0,1-11.32-11.32L192.69,188l-14.35-14.34a8,8,0,0,1,11.32-11.32L204,176.69l14.34-14.35a8,8,0,0,1,11.32,11.32L215.31,188Zm-45.19-89.51c-6.18,22.33-25.32,41.63-46.53,46.93A8.13,8.13,0,0,1,136,160a8,8,0,0,1-1.93-15.76c15.63-3.91,30.35-18.91,35-35.68,3.19-11.5,3.22-29-14.71-46.9L152,59.31V80a8,8,0,0,1-16,0V40a8,8,0,0,1,8-8h40a8,8,0,0,1,0,16H163.31l2.35,2.34C183.9,68.59,190.58,90.78,184.47,112.83Z" }));
+import s, { forwardRef as Z } from "react";
+import d from "../../lib/OptiBase.mjs";
+const i = Z((l, e) => {
+  var m = l, { children: a } = m, t = f(m, ["children"]);
+  return /* @__PURE__ */ s.createElement(d, p({ ref: e }, t), a, /* @__PURE__ */ s.createElement("path", { d: "M76,152a36,36,0,1,0,36,36A36,36,0,0,0,76,152Zm0,56a20,20,0,1,1,20-20A20,20,0,0,1,76,208ZM42.34,106.34,56.69,92,42.34,77.66A8,8,0,0,1,53.66,66.34L68,80.69,82.34,66.34A8,8,0,0,1,93.66,77.66L79.31,92l14.35,14.34a8,8,0,0,1-11.32,11.32L68,103.31,53.66,117.66a8,8,0,0,1-11.32-11.32Zm187.32,96a8,8,0,0,1-11.32,11.32L204,199.31l-14.34,14.35a8,8,0,0,1-11.32-11.32L192.69,188l-14.35-14.34a8,8,0,0,1,11.32-11.32L204,176.69l14.34-14.35a8,8,0,0,1,11.32,11.32L215.31,188Zm-45.19-89.51c-6.18,22.33-25.32,41.63-46.53,46.93A8.13,8.13,0,0,1,136,160a8,8,0,0,1-1.93-15.76c15.63-3.91,30.35-18.91,35-35.68,3.19-11.5,3.22-29-14.71-46.9L152,59.31V80a8,8,0,0,1-16,0V40a8,8,0,0,1,8-8h40a8,8,0,0,1,0,16H163.31l2.35,2.34C183.9,68.59,190.58,90.78,184.47,112.83Z" }));
 });
-R.displayName = "Regular";
+i.displayName = "Regular";
 export {
-  R as Regular
+  i as Regular,
+  i as default
 };
