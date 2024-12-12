@@ -144,6 +144,7 @@ const I: Icon = forwardRef(({ children, ...props }, ref) => (
 
 I.displayName = "${pascalize(weight)}";
 export { I as ${pascalize(weight)} }
+${weight === WEIGHTS[0] ? "export { I as default };" : ""}
 `;
     }
 
@@ -194,6 +195,7 @@ function generateExports(icons: AssetMap) {
 export type { Icon, IconProps, IconWeight } from "./lib";
 export { IconContext, IconBase } from "./lib";
 export * as SSR from "./ssr";
+export * as Opti from "./opti";
 
 `;
 
