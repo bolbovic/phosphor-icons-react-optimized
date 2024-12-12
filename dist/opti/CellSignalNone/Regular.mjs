@@ -1,31 +1,30 @@
-var i = Object.defineProperty;
+var R = Object.defineProperty;
 var m = Object.getOwnPropertySymbols;
-var p = Object.prototype.hasOwnProperty, f = Object.prototype.propertyIsEnumerable;
-var l = (e, t, a) => t in e ? i(e, t, { enumerable: !0, configurable: !0, writable: !0, value: a }) : e[t] = a, s = (e, t) => {
-  for (var a in t || (t = {}))
-    p.call(t, a) && l(e, a, t[a]);
+var l = Object.prototype.hasOwnProperty, c = Object.prototype.propertyIsEnumerable;
+var p = (e, r, a) => r in e ? R(e, r, { enumerable: !0, configurable: !0, writable: !0, value: a }) : e[r] = a, f = (e, r) => {
+  for (var a in r || (r = {}))
+    l.call(r, a) && p(e, a, r[a]);
   if (m)
-    for (var a of m(t))
-      f.call(t, a) && l(e, a, t[a]);
+    for (var a of m(r))
+      c.call(r, a) && p(e, a, r[a]);
   return e;
 };
-var c = (e, t) => {
+var i = (e, r) => {
   var a = {};
-  for (var r in e)
-    p.call(e, r) && t.indexOf(r) < 0 && (a[r] = e[r]);
+  for (var t in e)
+    l.call(e, t) && r.indexOf(t) < 0 && (a[t] = e[t]);
   if (e != null && m)
-    for (var r of m(e))
-      t.indexOf(r) < 0 && f.call(e, r) && (a[r] = e[r]);
+    for (var t of m(e))
+      r.indexOf(t) < 0 && c.call(e, t) && (a[t] = e[t]);
   return a;
 };
-import d, { forwardRef as R } from "react";
+import s, { forwardRef as d } from "react";
 import n from "../../lib/OptiBase.mjs";
-const u = R((r, a) => {
-  var o = r, { children: e } = o, t = c(o, ["children"]);
-  return /* @__PURE__ */ d.createElement(n, s({ ref: a }, t), e, /* @__PURE__ */ d.createElement("path", { d: "M48,192v8a8,8,0,0,1-16,0v-8a8,8,0,0,1,16,0Z" }));
+const g = d((t, a) => {
+  var o = t, { children: e } = o, r = i(o, ["children"]);
+  return /* @__PURE__ */ s.createElement(n, f({ ref: a }, r), e, /* @__PURE__ */ s.createElement("path", { d: "M48,192v8a8,8,0,0,1-16,0v-8a8,8,0,0,1,16,0Z" }));
 });
-u.displayName = "Regular";
+g.displayName = "Regular";
 export {
-  u as Regular,
-  u as default
+  g as Regular
 };

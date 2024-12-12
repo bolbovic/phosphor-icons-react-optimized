@@ -1,31 +1,30 @@
-var d = Object.defineProperty;
+var s = Object.defineProperty;
 var m = Object.getOwnPropertySymbols;
-var p = Object.prototype.hasOwnProperty, f = Object.prototype.propertyIsEnumerable;
-var l = (e, t, a) => t in e ? d(e, t, { enumerable: !0, configurable: !0, writable: !0, value: a }) : e[t] = a, s = (e, t) => {
-  for (var a in t || (t = {}))
-    p.call(t, a) && l(e, a, t[a]);
+var l = Object.prototype.hasOwnProperty, H = Object.prototype.propertyIsEnumerable;
+var p = (e, r, a) => r in e ? s(e, r, { enumerable: !0, configurable: !0, writable: !0, value: a }) : e[r] = a, c = (e, r) => {
+  for (var a in r || (r = {}))
+    l.call(r, a) && p(e, a, r[a]);
   if (m)
-    for (var a of m(t))
-      f.call(t, a) && l(e, a, t[a]);
+    for (var a of m(r))
+      H.call(r, a) && p(e, a, r[a]);
   return e;
 };
-var H = (e, t) => {
+var f = (e, r) => {
   var a = {};
-  for (var r in e)
-    p.call(e, r) && t.indexOf(r) < 0 && (a[r] = e[r]);
+  for (var t in e)
+    l.call(e, t) && r.indexOf(t) < 0 && (a[t] = e[t]);
   if (e != null && m)
-    for (var r of m(e))
-      t.indexOf(r) < 0 && f.call(e, r) && (a[r] = e[r]);
+    for (var t of m(e))
+      r.indexOf(t) < 0 && H.call(e, t) && (a[t] = e[t]);
   return a;
 };
-import c, { forwardRef as i } from "react";
-import R from "../../lib/OptiBase.mjs";
-const V = i((r, a) => {
-  var o = r, { children: e } = o, t = H(o, ["children"]);
-  return /* @__PURE__ */ c.createElement(R, s({ ref: a }, t), e, /* @__PURE__ */ c.createElement("path", { d: "M200,40H56A16,16,0,0,0,40,56V200a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,16v64H56V56Zm0,144H56V136H200v64Z" }));
+import i, { forwardRef as R } from "react";
+import V from "../../lib/OptiBase.mjs";
+const d = R((t, a) => {
+  var o = t, { children: e } = o, r = f(o, ["children"]);
+  return /* @__PURE__ */ i.createElement(V, c({ ref: a }, r), e, /* @__PURE__ */ i.createElement("path", { d: "M200,40H56A16,16,0,0,0,40,56V200a16,16,0,0,0,16,16H200a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,16v64H56V56Zm0,144H56V136H200v64Z" }));
 });
-V.displayName = "Regular";
+d.displayName = "Regular";
 export {
-  V as Regular,
-  V as default
+  d as Regular
 };

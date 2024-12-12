@@ -1,31 +1,30 @@
-var i = Object.defineProperty;
+var R = Object.defineProperty;
 var m = Object.getOwnPropertySymbols;
-var p = Object.prototype.hasOwnProperty, f = Object.prototype.propertyIsEnumerable;
-var l = (a, t, e) => t in a ? i(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, s = (a, t) => {
-  for (var e in t || (t = {}))
-    p.call(t, e) && l(a, e, t[e]);
+var l = Object.prototype.hasOwnProperty, c = Object.prototype.propertyIsEnumerable;
+var p = (e, r, a) => r in e ? R(e, r, { enumerable: !0, configurable: !0, writable: !0, value: a }) : e[r] = a, f = (e, r) => {
+  for (var a in r || (r = {}))
+    l.call(r, a) && p(e, a, r[a]);
   if (m)
-    for (var e of m(t))
-      f.call(t, e) && l(a, e, t[e]);
-  return a;
-};
-var c = (a, t) => {
-  var e = {};
-  for (var r in a)
-    p.call(a, r) && t.indexOf(r) < 0 && (e[r] = a[r]);
-  if (a != null && m)
-    for (var r of m(a))
-      t.indexOf(r) < 0 && f.call(a, r) && (e[r] = a[r]);
+    for (var a of m(r))
+      c.call(r, a) && p(e, a, r[a]);
   return e;
 };
-import d, { forwardRef as R } from "react";
+var i = (e, r) => {
+  var a = {};
+  for (var t in e)
+    l.call(e, t) && r.indexOf(t) < 0 && (a[t] = e[t]);
+  if (e != null && m)
+    for (var t of m(e))
+      r.indexOf(t) < 0 && c.call(e, t) && (a[t] = e[t]);
+  return a;
+};
+import s, { forwardRef as d } from "react";
 import n from "../../lib/OptiBase.mjs";
-const u = R((r, e) => {
-  var o = r, { children: a } = o, t = c(o, ["children"]);
-  return /* @__PURE__ */ d.createElement(n, s({ ref: e }, t), a, /* @__PURE__ */ d.createElement("path", { d: "M208,104a80,80,0,1,0-88,79.6V232a8,8,0,0,0,16,0V183.6A80.11,80.11,0,0,0,208,104Zm-80,64a64,64,0,1,1,64-64A64.07,64.07,0,0,1,128,168Z" }));
+const g = d((t, a) => {
+  var o = t, { children: e } = o, r = i(o, ["children"]);
+  return /* @__PURE__ */ s.createElement(n, f({ ref: a }, r), e, /* @__PURE__ */ s.createElement("path", { d: "M208,104a80,80,0,1,0-88,79.6V232a8,8,0,0,0,16,0V183.6A80.11,80.11,0,0,0,208,104Zm-80,64a64,64,0,1,1,64-64A64.07,64.07,0,0,1,128,168Z" }));
 });
-u.displayName = "Regular";
+g.displayName = "Regular";
 export {
-  u as Regular,
-  u as default
+  g as Regular
 };

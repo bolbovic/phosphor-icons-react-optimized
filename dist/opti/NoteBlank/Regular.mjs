@@ -1,31 +1,30 @@
-var d = Object.defineProperty;
+var s = Object.defineProperty;
 var m = Object.getOwnPropertySymbols;
-var p = Object.prototype.hasOwnProperty, f = Object.prototype.propertyIsEnumerable;
-var l = (e, t, a) => t in e ? d(e, t, { enumerable: !0, configurable: !0, writable: !0, value: a }) : e[t] = a, s = (e, t) => {
-  for (var a in t || (t = {}))
-    p.call(t, a) && l(e, a, t[a]);
+var l = Object.prototype.hasOwnProperty, H = Object.prototype.propertyIsEnumerable;
+var p = (e, r, a) => r in e ? s(e, r, { enumerable: !0, configurable: !0, writable: !0, value: a }) : e[r] = a, c = (e, r) => {
+  for (var a in r || (r = {}))
+    l.call(r, a) && p(e, a, r[a]);
   if (m)
-    for (var a of m(t))
-      f.call(t, a) && l(e, a, t[a]);
+    for (var a of m(r))
+      H.call(r, a) && p(e, a, r[a]);
   return e;
 };
-var H = (e, t) => {
+var f = (e, r) => {
   var a = {};
-  for (var r in e)
-    p.call(e, r) && t.indexOf(r) < 0 && (a[r] = e[r]);
+  for (var t in e)
+    l.call(e, t) && r.indexOf(t) < 0 && (a[t] = e[t]);
   if (e != null && m)
-    for (var r of m(e))
-      t.indexOf(r) < 0 && f.call(e, r) && (a[r] = e[r]);
+    for (var t of m(e))
+      r.indexOf(t) < 0 && H.call(e, t) && (a[t] = e[t]);
   return a;
 };
-import c, { forwardRef as i } from "react";
-import A from "../../lib/OptiBase.mjs";
-const R = i((r, a) => {
-  var o = r, { children: e } = o, t = H(o, ["children"]);
-  return /* @__PURE__ */ c.createElement(A, s({ ref: a }, t), e, /* @__PURE__ */ c.createElement("path", { d: "M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H156.69A15.86,15.86,0,0,0,168,219.31L219.31,168A15.86,15.86,0,0,0,224,156.69V48A16,16,0,0,0,208,32ZM48,48H208V152H160a8,8,0,0,0-8,8v48H48ZM196.69,168,168,196.69V168Z" }));
+import i, { forwardRef as A } from "react";
+import R from "../../lib/OptiBase.mjs";
+const V = A((t, a) => {
+  var o = t, { children: e } = o, r = f(o, ["children"]);
+  return /* @__PURE__ */ i.createElement(R, c({ ref: a }, r), e, /* @__PURE__ */ i.createElement("path", { d: "M208,32H48A16,16,0,0,0,32,48V208a16,16,0,0,0,16,16H156.69A15.86,15.86,0,0,0,168,219.31L219.31,168A15.86,15.86,0,0,0,224,156.69V48A16,16,0,0,0,208,32ZM48,48H208V152H160a8,8,0,0,0-8,8v48H48ZM196.69,168,168,196.69V168Z" }));
 });
-R.displayName = "Regular";
+V.displayName = "Regular";
 export {
-  R as Regular,
-  R as default
+  V as Regular
 };

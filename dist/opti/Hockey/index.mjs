@@ -1,14 +1,16 @@
-import { Regular as e } from "./Regular.mjs";
-import { Thin as f } from "./Thin.mjs";
-import { Light as p } from "./Light.mjs";
-import { Bold as l } from "./Bold.mjs";
-import { Fill as g } from "./Fill.mjs";
-import { Duotone as n } from "./Duotone.mjs";
+import { Regular as t } from "./Regular.mjs";
+import { Thin as x } from "./Thin.mjs";
+import { Light as l } from "./Light.mjs";
+import { Bold as a } from "./Bold.mjs";
+import { Fill as n } from "./Fill.mjs";
+import { Duotone as d } from "./Duotone.mjs";
+const o = "./Default";
 export {
-  l as Bold,
-  n as Duotone,
-  g as Fill,
-  p as Light,
-  e as Regular,
-  f as Thin
+  a as Bold,
+  d as Duotone,
+  n as Fill,
+  l as Light,
+  t as Regular,
+  x as Thin,
+  o as default
 };

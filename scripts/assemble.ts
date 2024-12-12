@@ -144,9 +144,14 @@ const I: Icon = forwardRef(({ children, ...props }, ref) => (
 
 I.displayName = "${pascalize(weight)}";
 export { I as ${pascalize(weight)} }
-${weight === WEIGHTS[0] ? "export { I as default };" : ""}
 `;
     }
+
+    const defaultString = `\
+/* GENERATED FILE */
+import { Regular } from "./Regular";
+export default Regular;
+`;
 
     try {
       fs.writeFileSync(path.join(CSR_PATH, `${name}.tsx`), csrString, {
@@ -159,6 +164,11 @@ ${weight === WEIGHTS[0] ? "export { I as default };" : ""}
         flag: "w",
       });
       fs.mkdirSync(path.join(OPTI_PATH, `${name}`));
+      fs.writeFileSync(
+        path.join(OPTI_PATH, name, "Default.tsx"),
+        defaultString,
+        { flag: "w" }
+      );
       for (let weight in icon) {
         fs.writeFileSync(
           path.join(OPTI_PATH, name, `${pascalize(weight)}.tsx`),
@@ -213,6 +223,7 @@ export { default as OptiBase } from "../lib/OptiBase";
 
   let optiCompIndex = `\
 /* GENERATED FILE */
+export default "./Default";
 `;
 
   WEIGHTS.forEach((w) => {

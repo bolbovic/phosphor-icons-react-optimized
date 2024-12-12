@@ -1,31 +1,30 @@
-var i = Object.defineProperty;
+var R = Object.defineProperty;
 var m = Object.getOwnPropertySymbols;
-var p = Object.prototype.hasOwnProperty, f = Object.prototype.propertyIsEnumerable;
-var l = (a, t, e) => t in a ? i(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, s = (a, t) => {
-  for (var e in t || (t = {}))
-    p.call(t, e) && l(a, e, t[e]);
+var l = Object.prototype.hasOwnProperty, c = Object.prototype.propertyIsEnumerable;
+var p = (e, r, a) => r in e ? R(e, r, { enumerable: !0, configurable: !0, writable: !0, value: a }) : e[r] = a, f = (e, r) => {
+  for (var a in r || (r = {}))
+    l.call(r, a) && p(e, a, r[a]);
   if (m)
-    for (var e of m(t))
-      f.call(t, e) && l(a, e, t[e]);
-  return a;
-};
-var c = (a, t) => {
-  var e = {};
-  for (var r in a)
-    p.call(a, r) && t.indexOf(r) < 0 && (e[r] = a[r]);
-  if (a != null && m)
-    for (var r of m(a))
-      t.indexOf(r) < 0 && f.call(a, r) && (e[r] = a[r]);
+    for (var a of m(r))
+      c.call(r, a) && p(e, a, r[a]);
   return e;
 };
-import d, { forwardRef as R } from "react";
+var i = (e, r) => {
+  var a = {};
+  for (var t in e)
+    l.call(e, t) && r.indexOf(t) < 0 && (a[t] = e[t]);
+  if (e != null && m)
+    for (var t of m(e))
+      r.indexOf(t) < 0 && c.call(e, t) && (a[t] = e[t]);
+  return a;
+};
+import s, { forwardRef as d } from "react";
 import n from "../../lib/OptiBase.mjs";
-const u = R((r, e) => {
-  var o = r, { children: a } = o, t = c(o, ["children"]);
-  return /* @__PURE__ */ d.createElement(n, s({ ref: e }, t), a, /* @__PURE__ */ d.createElement("path", { d: "M176,128a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,128Zm56,0A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z" }));
+const A = d((t, a) => {
+  var o = t, { children: e } = o, r = i(o, ["children"]);
+  return /* @__PURE__ */ s.createElement(n, f({ ref: a }, r), e, /* @__PURE__ */ s.createElement("path", { d: "M176,128a8,8,0,0,1-8,8H88a8,8,0,0,1,0-16h80A8,8,0,0,1,176,128Zm56,0A104,104,0,1,1,128,24,104.11,104.11,0,0,1,232,128Zm-16,0a88,88,0,1,0-88,88A88.1,88.1,0,0,0,216,128Z" }));
 });
-u.displayName = "Regular";
+A.displayName = "Regular";
 export {
-  u as Regular,
-  u as default
+  A as Regular
 };

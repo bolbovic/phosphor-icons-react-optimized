@@ -1,31 +1,30 @@
 var v = Object.defineProperty;
 var m = Object.getOwnPropertySymbols;
-var s = Object.prototype.hasOwnProperty, V = Object.prototype.propertyIsEnumerable;
-var o = (a, t, e) => t in a ? v(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, c = (a, t) => {
-  for (var e in t || (t = {}))
-    s.call(t, e) && o(a, e, t[e]);
+var c = Object.prototype.hasOwnProperty, h = Object.prototype.propertyIsEnumerable;
+var V = (a, r, e) => r in a ? v(a, r, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[r] = e, l = (a, r) => {
+  for (var e in r || (r = {}))
+    c.call(r, e) && V(a, e, r[e]);
   if (m)
-    for (var e of m(t))
-      V.call(t, e) && o(a, e, t[e]);
+    for (var e of m(r))
+      h.call(r, e) && V(a, e, r[e]);
   return a;
 };
-var h = (a, t) => {
+var p = (a, r) => {
   var e = {};
-  for (var r in a)
-    s.call(a, r) && t.indexOf(r) < 0 && (e[r] = a[r]);
+  for (var t in a)
+    c.call(a, t) && r.indexOf(t) < 0 && (e[t] = a[t]);
   if (a != null && m)
-    for (var r of m(a))
-      t.indexOf(r) < 0 && V.call(a, r) && (e[r] = a[r]);
+    for (var t of m(a))
+      r.indexOf(t) < 0 && h.call(a, t) && (e[t] = a[t]);
   return e;
 };
-import p, { forwardRef as A } from "react";
+import s, { forwardRef as A } from "react";
 import Z from "../../lib/OptiBase.mjs";
-const f = A((r, e) => {
-  var l = r, { children: a } = l, t = h(l, ["children"]);
-  return /* @__PURE__ */ p.createElement(Z, c({ ref: e }, t), a, /* @__PURE__ */ p.createElement("path", { d: "M60,144H44a8,8,0,0,0-8,8v56a8,8,0,0,0,16,0v-8h8a28,28,0,0,0,0-56Zm0,40H52V160h8a12,12,0,0,1,0,24Zm164,16.87a8,8,0,0,1-2.22,5.53A30.06,30.06,0,0,1,200,216c-17.65,0-32-16.15-32-36s14.35-36,32-36a29.45,29.45,0,0,1,16.48,5.11,8,8,0,0,1-9,13.27A13.21,13.21,0,0,0,200,160c-8.82,0-16,9-16,20s7.18,20,16,20a13.57,13.57,0,0,0,8-2.72V192a8,8,0,0,1,0-16h8a8,8,0,0,1,8,8ZM156,152v56a8,8,0,0,1-5.56,7.62A7.91,7.91,0,0,1,148,216a8,8,0,0,1-6.51-3.35L116,177v31a8,8,0,0,1-16,0V152a8,8,0,0,1,14.51-4.65L140,183V152a8,8,0,0,1,16,0ZM48,120a8,8,0,0,0,8-8V40h88V88a8,8,0,0,0,8,8h48v16a8,8,0,0,0,16,0V88a8,8,0,0,0-2.34-5.66l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40v72A8,8,0,0,0,48,120ZM160,51.31,188.69,80H160Z" }));
+const f = A((t, e) => {
+  var o = t, { children: a } = o, r = p(o, ["children"]);
+  return /* @__PURE__ */ s.createElement(Z, l({ ref: e }, r), a, /* @__PURE__ */ s.createElement("path", { d: "M60,144H44a8,8,0,0,0-8,8v56a8,8,0,0,0,16,0v-8h8a28,28,0,0,0,0-56Zm0,40H52V160h8a12,12,0,0,1,0,24Zm164,16.87a8,8,0,0,1-2.22,5.53A30.06,30.06,0,0,1,200,216c-17.65,0-32-16.15-32-36s14.35-36,32-36a29.45,29.45,0,0,1,16.48,5.11,8,8,0,0,1-9,13.27A13.21,13.21,0,0,0,200,160c-8.82,0-16,9-16,20s7.18,20,16,20a13.57,13.57,0,0,0,8-2.72V192a8,8,0,0,1,0-16h8a8,8,0,0,1,8,8ZM156,152v56a8,8,0,0,1-5.56,7.62A7.91,7.91,0,0,1,148,216a8,8,0,0,1-6.51-3.35L116,177v31a8,8,0,0,1-16,0V152a8,8,0,0,1,14.51-4.65L140,183V152a8,8,0,0,1,16,0ZM48,120a8,8,0,0,0,8-8V40h88V88a8,8,0,0,0,8,8h48v16a8,8,0,0,0,16,0V88a8,8,0,0,0-2.34-5.66l-56-56A8,8,0,0,0,152,24H56A16,16,0,0,0,40,40v72A8,8,0,0,0,48,120ZM160,51.31,188.69,80H160Z" }));
 });
 f.displayName = "Regular";
 export {
-  f as Regular,
-  f as default
+  f as Regular
 };
