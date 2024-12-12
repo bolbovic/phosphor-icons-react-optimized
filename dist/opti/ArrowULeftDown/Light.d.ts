@@ -1,0 +1,6 @@
+import type { Icon } from "../../lib/types";
+/**
+ * ![img](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI1NiAyNTYiIGZpbGw9IiMwMDAiPjxyZWN0IHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiBmaWxsPSIjRkZGIiByeD0iNDAiIHJ5PSI0MCIvPjxwYXRoIGQ9Ik0yMDYsODh2ODhhNiw2LDAsMCwxLTEyLDBWODhBNTAsNTAsMCwwLDAsOTQsODhWMjA5LjUxbDM3Ljc2LTM3Ljc1YTYsNiwwLDAsMSw4LjQ4LDguNDhsLTQ4LDQ4YTYsNiwwLDAsMS04LjQ4LDBsLTQ4LTQ4YTYsNiwwLDAsMSw4LjQ4LTguNDhMODIsMjA5LjUxVjg4YTYyLDYyLDAsMCwxLDEyNCwwWiIvPjwvc3ZnPg==)
+ */
+declare const I: Icon;
+export { I as Light };

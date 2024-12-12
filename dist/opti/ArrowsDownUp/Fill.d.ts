@@ -1,0 +1,6 @@
+import type { Icon } from "../../lib/types";
+/**
+ * ![img](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI1NiAyNTYiIGZpbGw9IiMwMDAiPjxyZWN0IHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiBmaWxsPSIjRkZGIiByeD0iNDAiIHJ5PSI0MCIvPjxwYXRoIGQ9Ik0xMTkuMzksMTcyLjk0YTgsOCwwLDAsMS0xLjczLDguNzJsLTMyLDMyYTgsOCwwLDAsMS0xMS4zMiwwbC0zMi0zMkE4LDgsMCwwLDEsNDgsMTY4SDcyVjQ4YTgsOCwwLDAsMSwxNiwwVjE2OGgyNEE4LDgsMCwwLDEsMTE5LjM5LDE3Mi45NFptOTQuMjctOTguNi0zMi0zMmE4LDgsMCwwLDAtMTEuMzIsMGwtMzIsMzJBOCw4LDAsMCwwLDE0NCw4OGgyNFYyMDhhOCw4LDAsMCwwLDE2LDBWODhoMjRhOCw4LDAsMCwwLDUuNjYtMTMuNjZaIi8+PC9zdmc+)
+ */
+declare const I: Icon;
+export { I as Fill };

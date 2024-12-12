@@ -209,6 +209,17 @@ export { default as OptiBase } from "../lib/OptiBase";
 
 `;
 
+  let optiCompIndex = `\
+/* GENERATED FILE */
+`;
+
+  WEIGHTS.forEach((w) => {
+    const name = pascalize(w);
+    optiCompIndex += `\
+export * from "./${name}";
+`;
+  });
+
   for (let key in icons) {
     const name = pascalize(key);
     csrIndex += `\
@@ -220,6 +231,9 @@ export * from "./${name}";
     optiIndex += `\
 export * as ${name} from "./${name}";
 `;
+    fs.writeFileSync(path.join(OPTI_PATH, name, "index.ts"), optiCompIndex, {
+      flag: "w",
+    });
   }
   try {
     fs.writeFileSync(INDEX_PATH, csrIndex, {

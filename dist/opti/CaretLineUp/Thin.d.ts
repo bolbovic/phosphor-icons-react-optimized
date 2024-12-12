@@ -1,0 +1,6 @@
+import type { Icon } from "../../lib/types";
+/**
+ * ![img](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI1NiAyNTYiIGZpbGw9IiMwMDAiPjxyZWN0IHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiBmaWxsPSIjRkZGIiByeD0iNDAiIHJ5PSI0MCIvPjxwYXRoIGQ9Ik0yMTAuODMsMTk0LjgzYTQsNCwwLDAsMS01LjY2LDBMMTI4LDExNy42Niw1MC44MywxOTQuODNhNCw0LDAsMCwxLTUuNjYtNS42Nmw4MC04MGE0LDQsMCwwLDEsNS42NiwwbDgwLDgwQTQsNCwwLDAsMSwyMTAuODMsMTk0LjgzWk00OCw3NkgyMDhhNCw0LDAsMCwwLDAtOEg0OGE0LDQsMCwwLDAsMCw4WiIvPjwvc3ZnPg==)
+ */
+declare const I: Icon;
+export { I as Thin };

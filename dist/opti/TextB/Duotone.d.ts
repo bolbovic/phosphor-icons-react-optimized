@@ -1,0 +1,6 @@
+import type { Icon } from "../../lib/types";
+/**
+ * ![img](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI1NiAyNTYiIGZpbGw9IiMwMDAiPjxyZWN0IHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiBmaWxsPSIjRkZGIiByeD0iNDAiIHJ5PSI0MCIvPjxwYXRoIGQ9Ik0yMDAsMTYwYTQwLDQwLDAsMCwxLTQwLDQwSDgwVjQ4aDY4YTM2LDM2LDAsMCwxLDAsNzJoMTJBNDAsNDAsMCwwLDEsMjAwLDE2MFoiIG9wYWNpdHk9IjAuMiIvPjxwYXRoIGQ9Ik0xNzguNDgsMTE1LjdBNDQsNDQsMCwwLDAsMTQ4LDQwSDgwYTgsOCwwLDAsMC04LDhWMjAwYTgsOCwwLDAsMCw4LDhoODBhNDgsNDgsMCwwLDAsMTguNDgtOTIuM1pNODgsNTZoNjBhMjgsMjgsMCwwLDEsMCw1Nkg4OFptNzIsMTM2SDg4VjEyOGg3MmEzMiwzMiwwLDAsMSwwLDY0WiIvPjwvc3ZnPg==)
+ */
+declare const I: Icon;
+export { I as Duotone };

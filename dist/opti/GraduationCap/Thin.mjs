@@ -1,0 +1,30 @@
+var s = Object.defineProperty;
+var m = Object.getOwnPropertySymbols;
+var c = Object.prototype.hasOwnProperty, i = Object.prototype.propertyIsEnumerable;
+var o = (a, t, e) => t in a ? s(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, p = (a, t) => {
+  for (var e in t || (t = {}))
+    c.call(t, e) && o(a, e, t[e]);
+  if (m)
+    for (var e of m(t))
+      i.call(t, e) && o(a, e, t[e]);
+  return a;
+};
+var n = (a, t) => {
+  var e = {};
+  for (var l in a)
+    c.call(a, l) && t.indexOf(l) < 0 && (e[l] = a[l]);
+  if (a != null && m)
+    for (var l of m(a))
+      t.indexOf(l) < 0 && i.call(a, l) && (e[l] = a[l]);
+  return e;
+};
+import f, { forwardRef as V } from "react";
+import Z from "../../lib/OptiBase.mjs";
+const d = V((l, e) => {
+  var r = l, { children: a } = r, t = n(r, ["children"]);
+  return /* @__PURE__ */ f.createElement(Z, p({ ref: e }, t), a, /* @__PURE__ */ f.createElement("path", { d: "M249.88,92.47l-120-64a4,4,0,0,0-3.76,0l-120,64a4,4,0,0,0,0,7.06L36,115.47v50.82a11.92,11.92,0,0,0,3,8c12.65,14.09,41,37.73,89,37.73,21,0,38.2-4.52,52-10.79V240a4,4,0,0,0,8,0V197.18a111.64,111.64,0,0,0,29-22.91,11.94,11.94,0,0,0,3-8V115.47l29.88-15.94a4,4,0,0,0,0-7.06ZM128,204c-44.83,0-71.25-22-83-35.08a3.92,3.92,0,0,1-1-2.63V119.73l82.12,43.8a4,4,0,0,0,3.76,0L180,136.8v55.53C166.58,199,149.39,204,128,204Zm84-37.71a4,4,0,0,1-1,2.64,103.32,103.32,0,0,1-23,19v-55.4l24-12.8Zm-24.59-42.51a4,4,0,0,0-1.53-1.44l-56-29.87a4,4,0,0,0-3.76,7.06L179.5,128,128,155.47,16.5,96,128,36.53,239.5,96Z" }));
+});
+d.displayName = "Thin";
+export {
+  d as Thin
+};

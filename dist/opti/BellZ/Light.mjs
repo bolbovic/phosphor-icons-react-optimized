@@ -1,0 +1,30 @@
+var s = Object.defineProperty;
+var r = Object.getOwnPropertySymbols;
+var c = Object.prototype.hasOwnProperty, i = Object.prototype.propertyIsEnumerable;
+var H = (a, t, e) => t in a ? s(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, p = (a, t) => {
+  for (var e in t || (t = {}))
+    c.call(t, e) && H(a, e, t[e]);
+  if (r)
+    for (var e of r(t))
+      i.call(t, e) && H(a, e, t[e]);
+  return a;
+};
+var f = (a, t) => {
+  var e = {};
+  for (var m in a)
+    c.call(a, m) && t.indexOf(m) < 0 && (e[m] = a[m]);
+  if (a != null && r)
+    for (var m of r(a))
+      t.indexOf(m) < 0 && i.call(a, m) && (e[m] = a[m]);
+  return e;
+};
+import h, { forwardRef as L } from "react";
+import Z from "../../lib/OptiBase.mjs";
+const d = L((m, e) => {
+  var o = m, { children: a } = o, t = f(o, ["children"]);
+  return /* @__PURE__ */ h.createElement(Z, p({ ref: e }, t), a, /* @__PURE__ */ h.createElement("path", { d: "M150,144a6,6,0,0,1-6,6H112a6,6,0,0,1-5-9.33L132.79,102H112a6,6,0,0,1,0-12h32a6,6,0,0,1,5,9.33L123.21,138H144A6,6,0,0,1,150,144Zm70.11,47a13.83,13.83,0,0,1-12.1,7H165.52a38,38,0,0,1-75,0H48a14,14,0,0,1-12.06-21.06C41.59,167.2,50,139.74,50,104a78,78,0,1,1,156,0c0,35.73,8.42,63.2,14.08,72.94A13.9,13.9,0,0,1,220.11,191Zm-66.82,7H102.71a26,26,0,0,0,50.58,0Zm56.41-15C202.13,170,194,139.68,194,104a66,66,0,1,0-132,0c0,35.69-8.14,66-15.71,79a2,2,0,0,0,0,2,1.9,1.9,0,0,0,1.7,1H208a1.9,1.9,0,0,0,1.7-1A2,2,0,0,0,209.7,183Z" }));
+});
+d.displayName = "Light";
+export {
+  d as Light
+};
