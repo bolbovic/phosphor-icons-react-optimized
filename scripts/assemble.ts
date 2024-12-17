@@ -212,8 +212,6 @@ export { default as OptiBase } from "../lib/OptiBase";
 
   let optiCompIndex = `\
 /* GENERATED FILE */
-import { Regular } from "./Regular";
-export default Regular;
 `;
 
   WEIGHTS.forEach((w) => {
