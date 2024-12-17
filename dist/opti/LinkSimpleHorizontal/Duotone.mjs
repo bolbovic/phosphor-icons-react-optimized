@@ -1,0 +1,36 @@
+var d = Object.defineProperty;
+var m = Object.getOwnPropertySymbols;
+var H = Object.prototype.hasOwnProperty, c = Object.prototype.propertyIsEnumerable;
+var p = (a, t, e) => t in a ? d(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, n = (a, t) => {
+  for (var e in t || (t = {}))
+    H.call(t, e) && p(a, e, t[e]);
+  if (m)
+    for (var e of m(t))
+      c.call(t, e) && p(a, e, t[e]);
+  return a;
+};
+var i = (a, t) => {
+  var e = {};
+  for (var o in a)
+    H.call(a, o) && t.indexOf(o) < 0 && (e[o] = a[o]);
+  if (a != null && m)
+    for (var o of m(a))
+      t.indexOf(o) < 0 && c.call(a, o) && (e[o] = a[o]);
+  return e;
+};
+import r, { forwardRef as f } from "react";
+import l from "../../lib/OptiBase.mjs";
+const s = f((o, e) => {
+  var h = o, { children: a } = h, t = i(h, ["children"]);
+  return /* @__PURE__ */ r.createElement(l, n({ ref: e }, t), a, /* @__PURE__ */ r.createElement(
+    "path",
+    {
+      d: "M240,128h0a48,48,0,0,1-48,48H64a48,48,0,0,1-48-48h0A48,48,0,0,1,64,80H192A48,48,0,0,1,240,128Z",
+      opacity: "0.2"
+    }
+  ), /* @__PURE__ */ r.createElement("path", { d: "M80,120h96a8,8,0,0,1,0,16H80a8,8,0,0,1,0-16Zm24,48H64a40,40,0,0,1,0-80h40a8,8,0,0,0,0-16H64a56,56,0,0,0,0,112h40a8,8,0,0,0,0-16Zm88-96H152a8,8,0,0,0,0,16h40a40,40,0,0,1,0,80H152a8,8,0,0,0,0,16h40a56,56,0,0,0,0-112Z" }));
+});
+s.displayName = "Duotone";
+export {
+  s as Duotone
+};

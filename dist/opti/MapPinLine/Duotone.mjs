@@ -1,0 +1,36 @@
+var s = Object.defineProperty;
+var m = Object.getOwnPropertySymbols;
+var n = Object.prototype.hasOwnProperty, A = Object.prototype.propertyIsEnumerable;
+var p = (a, t, e) => t in a ? s(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, Z = (a, t) => {
+  for (var e in t || (t = {}))
+    n.call(t, e) && p(a, e, t[e]);
+  if (m)
+    for (var e of m(t))
+      A.call(t, e) && p(a, e, t[e]);
+  return a;
+};
+var i = (a, t) => {
+  var e = {};
+  for (var o in a)
+    n.call(a, o) && t.indexOf(o) < 0 && (e[o] = a[o]);
+  if (a != null && m)
+    for (var o of m(a))
+      t.indexOf(o) < 0 && A.call(a, o) && (e[o] = a[o]);
+  return e;
+};
+import c, { forwardRef as d } from "react";
+import f from "../../lib/OptiBase.mjs";
+const l = d((o, e) => {
+  var r = o, { children: a } = r, t = i(r, ["children"]);
+  return /* @__PURE__ */ c.createElement(f, Z({ ref: e }, t), a, /* @__PURE__ */ c.createElement(
+    "path",
+    {
+      d: "M128,24a80,80,0,0,0-80,80c0,72,80,128,80,128s80-56,80-128A80,80,0,0,0,128,24Zm0,112a32,32,0,1,1,32-32A32,32,0,0,1,128,136Z",
+      opacity: "0.2"
+    }
+  ), /* @__PURE__ */ c.createElement("path", { d: "M200,224H150.54A266.56,266.56,0,0,0,174,200.25c27.45-31.57,42-64.85,42-96.25a88,88,0,0,0-176,0c0,31.4,14.51,64.68,42,96.25A266.56,266.56,0,0,0,105.46,224H56a8,8,0,0,0,0,16H200a8,8,0,0,0,0-16ZM56,104a72,72,0,0,1,144,0c0,57.23-55.47,105-72,118C111.47,209,56,161.23,56,104Zm112,0a40,40,0,1,0-40,40A40,40,0,0,0,168,104Zm-64,0a24,24,0,1,1,24,24A24,24,0,0,1,104,104Z" }));
+});
+l.displayName = "Duotone";
+export {
+  l as Duotone
+};

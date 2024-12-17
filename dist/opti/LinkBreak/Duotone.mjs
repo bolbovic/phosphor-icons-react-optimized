@@ -1,0 +1,36 @@
+var i = Object.defineProperty;
+var o = Object.getOwnPropertySymbols;
+var Z = Object.prototype.hasOwnProperty, c = Object.prototype.propertyIsEnumerable;
+var p = (a, t, e) => t in a ? i(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, n = (a, t) => {
+  for (var e in t || (t = {}))
+    Z.call(t, e) && p(a, e, t[e]);
+  if (o)
+    for (var e of o(t))
+      c.call(t, e) && p(a, e, t[e]);
+  return a;
+};
+var M = (a, t) => {
+  var e = {};
+  for (var l in a)
+    Z.call(a, l) && t.indexOf(l) < 0 && (e[l] = a[l]);
+  if (a != null && o)
+    for (var l of o(a))
+      t.indexOf(l) < 0 && c.call(a, l) && (e[l] = a[l]);
+  return e;
+};
+import r, { forwardRef as d } from "react";
+import f from "../../lib/OptiBase.mjs";
+const s = d((l, e) => {
+  var m = l, { children: a } = m, t = M(m, ["children"]);
+  return /* @__PURE__ */ r.createElement(f, n({ ref: e }, t), a, /* @__PURE__ */ r.createElement(
+    "path",
+    {
+      d: "M204.28,108.28l-96,96a40,40,0,0,1-56.56-56.56l96-96a40,40,0,0,1,56.56,56.56Z",
+      opacity: "0.2"
+    }
+  ), /* @__PURE__ */ r.createElement("path", { d: "M198.63,57.37a32,32,0,0,0-45.19-.06L141.79,69.52a8,8,0,0,1-11.58-11l11.72-12.29a1.59,1.59,0,0,1,.13-.13,48,48,0,0,1,67.88,67.88,1.59,1.59,0,0,1-.13.13l-12.29,11.72a8,8,0,0,1-11-11.58l12.21-11.65A32,32,0,0,0,198.63,57.37ZM114.21,186.48l-11.65,12.21a32,32,0,0,1-45.25-45.25l12.21-11.65a8,8,0,0,0-11-11.58L46.19,141.93a1.59,1.59,0,0,0-.13.13,48,48,0,0,0,67.88,67.88,1.59,1.59,0,0,0,.13-.13l11.72-12.29a8,8,0,1,0-11.58-11ZM216,152H192a8,8,0,0,0,0,16h24a8,8,0,0,0,0-16ZM40,104H64a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16Zm120,80a8,8,0,0,0-8,8v24a8,8,0,0,0,16,0V192A8,8,0,0,0,160,184ZM96,72a8,8,0,0,0,8-8V40a8,8,0,0,0-16,0V64A8,8,0,0,0,96,72Z" }));
+});
+s.displayName = "Duotone";
+export {
+  s as Duotone
+};

@@ -1,0 +1,6 @@
+import type { Icon } from "../../lib/types";
+/**
+ * ![img](data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgdmlld0JveD0iMCAwIDI1NiAyNTYiIGZpbGw9IiMwMDAiPjxyZWN0IHdpZHRoPSIyNTYiIGhlaWdodD0iMjU2IiBmaWxsPSIjRkZGIiByeD0iNDAiIHJ5PSI0MCIvPjxwYXRoIGQ9Ik0yMjgsMTkyYTEyLDEyLDAsMCwxLTI0LDBjMC03Ny4yLTYyLjgtMTQwLTE0MC0xNDBhMTIsMTIsMCwwLDEsMC0yNEMxNTQuNDMsMjgsMjI4LDEwMS41NywyMjgsMTkyWk02NCwxMDBhMTIsMTIsMCwwLDAsMCwyNCw2OC4wNyw2OC4wNywwLDAsMSw2OCw2OCwxMiwxMiwwLDAsMCwyNCwwQTkyLjEsOTIuMSwwLDAsMCw2NCwxMDBabTQsNzJhMTYsMTYsMCwxLDAsMTYsMTZBMTYsMTYsMCwwLDAsNjgsMTcyWiIvPjwvc3ZnPg==)
+ */
+declare const I: Icon;
+export { I as Bold };

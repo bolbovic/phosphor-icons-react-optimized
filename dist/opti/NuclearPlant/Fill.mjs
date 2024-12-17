@@ -1,0 +1,30 @@
+var s = Object.defineProperty;
+var c = Object.getOwnPropertySymbols;
+var m = Object.prototype.hasOwnProperty, o = Object.prototype.propertyIsEnumerable;
+var l = (a, t, e) => t in a ? s(a, t, { enumerable: !0, configurable: !0, writable: !0, value: e }) : a[t] = e, i = (a, t) => {
+  for (var e in t || (t = {}))
+    m.call(t, e) && l(a, e, t[e]);
+  if (c)
+    for (var e of c(t))
+      o.call(t, e) && l(a, e, t[e]);
+  return a;
+};
+var p = (a, t) => {
+  var e = {};
+  for (var r in a)
+    m.call(a, r) && t.indexOf(r) < 0 && (e[r] = a[r]);
+  if (a != null && c)
+    for (var r of c(a))
+      t.indexOf(r) < 0 && o.call(a, r) && (e[r] = a[r]);
+  return e;
+};
+import f, { forwardRef as A } from "react";
+import H from "../../lib/OptiBase.mjs";
+const M = A((r, e) => {
+  var h = r, { children: a } = h, t = p(h, ["children"]);
+  return /* @__PURE__ */ f.createElement(H, i({ ref: e }, t), a, /* @__PURE__ */ f.createElement("path", { d: "M152,32h24a8,8,0,0,0,8-8,8,8,0,0,1,16,0,24,24,0,0,1-24,24H152a8,8,0,0,0-8,8,8,8,0,0,1-16,0A24,24,0,0,1,152,32ZM104,64a8,8,0,0,0,8-8,40,40,0,0,1,40-40h8a8,8,0,0,0,0-16h-8A56.06,56.06,0,0,0,96,56,8,8,0,0,0,104,64ZM248,216a8,8,0,0,1-8,8H16a8,8,0,0,1,0-16H32.74c13.77-27.83,29.48-68.69,31.12-112.66A15.91,15.91,0,0,1,79.85,80h88.33a16,16,0,0,1,16,15.28c2.1,47.84,23.84,92.37,35.29,112.72H240A8,8,0,0,1,248,216ZM168.18,96h-16c1.77,43.72,17.39,84.32,31.09,112h18C188.68,184.08,170.18,141.64,168.18,96Z" }));
+});
+M.displayName = "Fill";
+export {
+  M as Fill
+};

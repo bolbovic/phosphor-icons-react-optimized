@@ -2,6 +2,7 @@
 export type { Icon, IconProps, IconWeight } from "./lib";
 export { IconContext, IconBase } from "./lib";
 export * as SSR from "./ssr";
+export * as Opti from "./opti";
 
 export * from "./csr/Acorn";
 export * from "./csr/AddressBook";
