@@ -147,12 +147,6 @@ export { I as ${pascalize(weight)} }
 `;
     }
 
-    const defaultString = `\
-/* GENERATED FILE */
-import { Regular } from "./Regular";
-export default Regular;
-`;
-
     try {
       fs.writeFileSync(path.join(CSR_PATH, `${name}.tsx`), csrString, {
         flag: "w",
@@ -164,11 +158,6 @@ export default Regular;
         flag: "w",
       });
       fs.mkdirSync(path.join(OPTI_PATH, `${name}`));
-      fs.writeFileSync(
-        path.join(OPTI_PATH, name, "Default.tsx"),
-        defaultString,
-        { flag: "w" }
-      );
       for (let weight in icon) {
         fs.writeFileSync(
           path.join(OPTI_PATH, name, `${pascalize(weight)}.tsx`),
@@ -223,7 +212,8 @@ export { default as OptiBase } from "../lib/OptiBase";
 
   let optiCompIndex = `\
 /* GENERATED FILE */
-export default "./Default";
+import { Regular } from "./Regular";
+export default Regular;
 `;
 
   WEIGHTS.forEach((w) => {

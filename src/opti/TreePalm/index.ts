@@ -1,5 +1,6 @@
 /* GENERATED FILE */
-export default "./Default";
+import { Regular } from "./Regular";
+export default Regular;
 export * from "./Regular";
 export * from "./Thin";
 export * from "./Light";
